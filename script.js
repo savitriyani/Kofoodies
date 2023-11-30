@@ -10,8 +10,16 @@ right.addEventListener('click', () =>{
 })
 
 let poster = document.getElementById('poster')
-let poster = document.getElementById('poster')
+let title = document.getElementById('title')
 let price_cont = document.getElementById('price_cont')
+let description = document.getElementById('description');
+
+let cardDescriptions = document.querySelectorAll('.card-description');
+
+// Hide all card descriptions
+cardDescriptions.forEach(desc => {
+    desc.style.display = 'none';
+});
 
 Array.from(document.getElementsByClassName('card')).forEach((ele, i)=>{
     // console.log(ele)
@@ -19,5 +27,13 @@ Array.from(document.getElementsByClassName('card')).forEach((ele, i)=>{
         poster.src = ele.getElementsByTagName('img')[0].src;
         title.innerText = ele.getElementsByTagName('h5')[0].innerText
         price_cont.innerText = ele.getElementsByTagName('h4')[0].innerText
-    })
+        
+        
+
+        // Find the card description for the clicked card
+        let cardDescription = ele.querySelector('.card-description');
+
+        // Set the description text
+        description.innerText = cardDescription.innerText
+})
 })

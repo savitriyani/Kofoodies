@@ -29,6 +29,8 @@ header {
     padding: 0px 30px;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+    transition: 1s linear;
 }
 header .logo {
     position: absolute;
@@ -163,7 +165,7 @@ header section {
 }
 header section .content {
     position: relative;
-    left: 170px;
+    left: 370px;
     margin-top: 10%;
     display: flex;
     align-items: flex-start;
@@ -210,6 +212,7 @@ header section .cards {
     height: 140px;
     /* border: 1px solid #000; */
     position: relative;
+    /* top: 20%; */
     top: 20%;
     padding-left: 30px;
     display: flex;
@@ -228,6 +231,7 @@ header section .cards .card {
     height: 125px;
     border: 1px solid #000;
     margin-right: 13px;
+    background: #282828;
     border-radius: 50px 10px 10px 10px;
 }
 header section .cards .card:nth-last-child(1) {
@@ -289,7 +293,7 @@ header section .cards .card .rate_cart .bi {
 header section .social {
     position: relative;
     width: 100%;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     top: 20%;
     display: flex;
     align-items: center;
@@ -320,4 +324,87 @@ header section .social .icons a {
 }
 header section .social .icons a:hover {
     color: #000;
+}
+@media screen and (max-width: 1260px) {
+    header {
+        width: 83%;
+    }
+}
+@media screen and (max-width: 885px) {
+    header {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 775px) {
+    header .logo {
+        left: 13%;
+    }
+    header section .content {
+        left: 340px;
+    }
+    header section {
+        width: 92%;
+    }
+}
+@media screen and (max-width: 730px) {
+    header {
+        width: 100%;
+        height: 100%;
+    }
+    header nav .right_menu ul li {
+        padding: 3px 6px;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    header nav .right_menu ul {
+        position: absolute;
+        top: 20%;
+        flex-direction: column;
+        width: 15px;
+        right: 17px;
+    }
+    header nav .right_menu ul li {
+        padding: 30px 10px;
+        transform: rotate(90deg);
+    }
+    header section .content {
+        left: 24%;
+        top: 38%;
+    }
+    header .logo {
+        left: 30%;
+    }
+    header section .cards {
+        top: 43%;
+    }
+    header section .social {
+        top: 45%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    header .logo {
+        left: 20%;
+    }
+    header section .content {
+        left: 11%;
+        top: 38%;
+    }
+}
+
+@media screen and (max-width: 418px) {
+    header section .content h1 {
+        font-size: 32px;
+        transition: 1s linear;
+    }
+    header section .content p {
+        font-size: 9px;
+        width: 220px;
+    }
+    header .logo {
+        width: 245px;
+        margin: 75px 0px 0px -10px;
+    }
 }
